@@ -1,0 +1,6 @@
+# This is a configuration file.
+# Please check if the right hand site values are correct
+# -----------------------------------------------------------------------------
+input_path: data\companies.xlsx
+output_path: data\companies_output.xlsx
+sheet_name: Worksheet
