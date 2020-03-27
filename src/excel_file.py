@@ -24,7 +24,11 @@ class ExcelFile():
         self._wb.save(new_wb_path)
         self._wb.close()
 
-    def select_sheet(self, sheet_name):
+    def select_sheet(self, sheet_name=None):
+        if not sheet_name:
+            self._sh = self._wb.sheets[0]
+            print(f'[ExcelFile]: Default sheet (1): <{self._sh}>')
+            return
         self._sh = self._wb.sheets(sheet_name)
         print(f'[ExcelFile]: Selected sheet <{self._sh}>')
 
